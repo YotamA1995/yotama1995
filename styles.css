@@ -225,6 +225,35 @@ header {
     padding: 1rem 0;
 }
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: var(--ink);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.nav-link:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+}
+
 .logo-text {
     font-size: 1.5rem;
     font-weight: 700;
@@ -520,6 +549,7 @@ header {
 /* Testimonials */
 .testimonials {
     padding: 4rem 0;
+    background-color: var(--card);
 }
 
 .testimonials-grid {
@@ -582,7 +612,7 @@ header {
 /* Early Access */
 .early-access {
     padding: 4rem 0;
-    background-color: var(--card);
+    background-color: var(--bg);
 }
 
 .early-access-content {
