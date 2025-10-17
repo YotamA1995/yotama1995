@@ -247,6 +247,11 @@ header {
     height: 44px;
 }
 
+.nav-btn:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+}
+
 .nav-btn svg {
     width: 20px;
     height: 20px;
@@ -337,6 +342,7 @@ header {
     font-weight: 700;
     color: var(--ink);
     margin: 0;
+    text-decoration: none;
 }
 
 /* Hero Section */
