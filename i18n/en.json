@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "title": "Tiny Tale — Personalized Children's Stories from Your Everyday Moments",
+    "description": "Turn your child's everyday moments into tiny bedtime magic. Tiny Tale creates personalized stories and poems in minutes.",
+    "ogTitle": "Tiny Tale — Personalized Children's Stories",
+    "ogDescription": "Turn your child's everyday moments into tiny bedtime magic. Tiny Tale creates personalized stories and poems in minutes."
+  },
+  "header": {
+    "logo": {
+      "text": "Tiny Tale",
+      "ariaLabel": "Tiny Tale home"
+    },
+    "navigation": {
+      "ariaLabel": "Primary navigation",
+      "contact": {
+        "title": "Contact us",
+        "sr": "Email Tiny Tale"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "sr": "Message Tiny Tale on WhatsApp"
+      },
+      "instagram": {
+        "title": "Instagram",
+        "sr": "Visit Tiny Tale on Instagram"
+      },
+      "tiktok": {
+        "title": "TikTok",
+        "sr": "Visit Tiny Tale on TikTok"
+      },
+      "cta": "Get Early Access"
+    }
+  },
+  "languageSwitcher": {
+    "groupLabel": "Language selection",
+    "englishShort": "EN",
+    "englishFull": "English",
+    "hebrewShort": "HE",
+    "hebrewFull": "Hebrew",
+    "status": "Language set to English"
+  },
+  "hero": {
+    "headline": "Turn today's moments into tiny bedtime magic.",
+    "subhead": "Tiny Tale transforms your child's everyday photos into short, personalized stories or poems—ready to read and share.",
+    "primaryCta": "Get Early Access",
+    "secondaryCta": "See how it works",
+    "preview": {
+      "title": "Emma's Magical Day",
+      "body": "Once upon a time, Emma found the most beautiful butterfly..."
+    }
+  },
+  "how": {
+    "title": "How it Works",
+    "steps": {
+      "capture": {
+        "title": "Capture a moment",
+        "body": "Snap a photo or pick one you love."
+      },
+      "details": {
+        "title": "Add tiny details",
+        "body": "Name, age, interests—just a few taps."
+      },
+      "story": {
+        "title": "Get a story",
+        "body": "Magical, personalized story or poem in seconds."
+      }
+    }
+  },
+  "features": {
+    "title": "Why Parents Love Tiny Tale",
+    "items": {
+      "personalized": {
+        "title": "Personalized stories & poems",
+        "body": "Every story is unique, crafted just for your child using their name, age, and interests."
+      },
+      "illustrations": {
+        "title": "Gentle pastel illustrations",
+        "body": "Beautiful, calming artwork that brings each story to life with soft, dreamy colors."
+      },
+      "readable": {
+        "title": "Text inside the image, readable",
+        "body": "Stories are embedded in beautiful images, making them perfect for sharing and saving."
+      },
+      "sharing": {
+        "title": "Easy sharing with family",
+        "body": "Send beautiful stories to grandparents, aunts, uncles, and friends with one tap."
+      },
+      "private": {
+        "title": "Safe & private by design",
+        "body": "Your photos stay private. Stories are generated locally, and we never store personal data."
+      },
+      "fast": {
+        "title": "Works in minutes",
+        "body": "From photo to finished story in under 2 minutes. Perfect for busy parents."
+      }
+    }
+  },
+  "samples": {
+    "title": "Sample Stories",
+    "items": {
+      "bedtime": {
+        "title": "Bedtime moon",
+        "body": "A gentle story about a child who befriends the moon"
+      },
+      "park": {
+        "title": "Park day",
+        "body": "Adventures in the playground with magical friends"
+      },
+      "grandma": {
+        "title": "Grandma visit",
+        "body": "A warm tale of love and cookies with grandma"
+      },
+      "art": {
+        "title": "Art day",
+        "body": "When crayons come to life and create magic"
+      }
+    }
+  },
+  "earlyAccess": {
+    "title": "Join the early access list.",
+    "email": {
+      "label": "Email address",
+      "placeholder": "Your email address"
+    },
+    "firstName": {
+      "label": "First name (optional)",
+      "placeholder": "First name (optional)"
+    },
+    "submit": "Notify Me",
+    "disclaimer": "No spam. One email when we're ready."
+  },
+  "testimonials": {
+    "title": "What Parents Say",
+    "items": {
+      "sarah": {
+        "quote": "\"My daughter asks for her Tiny Tale stories every night. It's become our favorite bedtime routine.\"",
+        "name": "Sarah M.",
+        "meta": "Mom of Emma, age 4"
+      },
+      "mike": {
+        "quote": "\"Finally, a way to turn those random playground photos into something meaningful. My kids love seeing themselves in stories.\"",
+        "name": "Mike R.",
+        "meta": "Dad of twins, ages 5 & 6"
+      },
+      "lisa": {
+        "quote": "\"The stories are so sweet and age-appropriate. It's amazing how it captures my son's personality perfectly.\"",
+        "name": "Lisa K.",
+        "meta": "Mom of Jake, age 3"
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "whatIs": {
+        "question": "What is Tiny Tale?",
+        "answer": "Tiny Tale is a mobile app that transforms your child's everyday photos into personalized bedtime stories and poems. Simply upload a photo, add a few details about your child, and receive a magical story in minutes."
+      },
+      "safe": {
+        "question": "Is it safe for kids' photos?",
+        "answer": "Absolutely. We prioritize your child's privacy and safety. Photos are processed locally on your device whenever possible, and we never store or share personal images. All stories are generated using secure, privacy-focused technology."
+      },
+      "time": {
+        "question": "How long does it take to get a story?",
+        "answer": "Most stories are generated in under 2 minutes. The process includes analyzing your photo, understanding your child's details, and creating a personalized story with beautiful illustrations."
+      },
+      "languages": {
+        "question": "Will it work in Hebrew and English?",
+        "answer": "Yes! Tiny Tale supports multiple languages including Hebrew and English. You can choose your preferred language for both the app interface and the generated stories."
+      },
+      "cost": {
+        "question": "How much will it cost?",
+        "answer": "We're still finalizing our pricing, but we plan to offer both free stories (with limitations) and affordable subscription options for unlimited stories. Early access users will get special pricing when we launch."
+      }
+    }
+  },
+  "footer": {
+    "copy": "© Tiny Tale 2024",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  }
+}

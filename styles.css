@@ -231,6 +231,50 @@ header {
     gap: 0.75rem;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.language-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    border-radius: 999px;
+    border: 1px solid var(--ink-muted);
+    background-color: var(--card);
+}
+
+.language-option {
+    border: none;
+    background: none;
+    color: var(--ink-muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.language-option.is-active {
+    background-color: var(--ink);
+    color: var(--card);
+}
+
+.language-option:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+}
+
+.language-option span[aria-hidden="true"] {
+    display: inline-block;
+    min-width: 1.75ch;
+    text-align: center;
+}
+
 /* Base navigation button styles */
 .nav-btn {
     display: inline-flex;
@@ -311,7 +355,7 @@ header {
 }
 
 .nav-links .btn {
-    margin-left: 0.5rem;
+    margin-inline-start: 0.5rem;
 }
 
 .nav-link {
@@ -867,6 +911,10 @@ footer {
         font-size: 0.875rem;
         padding: 0.5rem 1rem;
     }
+
+    .header-actions {
+        gap: 0.75rem;
+    }
 }
 
 @media (max-width: 640px) {
@@ -874,6 +922,13 @@ footer {
         flex-direction: column;
         gap: 1rem;
         padding: 1rem 0;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0.75rem;
     }
     
     .nav-links {
@@ -892,6 +947,10 @@ footer {
     .nav-btn svg {
         width: 16px;
         height: 16px;
+    }
+
+    .language-switcher {
+        align-self: center;
     }
 }
 

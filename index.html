@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiny Tale — Personalized Children's Stories from Your Everyday Moments</title>
-    <meta name="description" content="Turn your child's everyday moments into tiny bedtime magic. Tiny Tale creates personalized stories and poems in minutes.">
+    <title data-i18n="meta.title">Tiny Tale — Personalized Children's Stories from Your Everyday Moments</title>
+    <meta name="description" content="Turn your child's everyday moments into tiny bedtime magic. Tiny Tale creates personalized stories and poems in minutes." data-i18n-attr="content:meta.description">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Tiny Tale — Personalized Children's Stories">
-    <meta property="og:description" content="Turn your child's everyday moments into tiny bedtime magic. Tiny Tale creates personalized stories and poems in minutes.">
+    <meta property="og:title" content="Tiny Tale — Personalized Children's Stories" data-i18n-attr="content:meta.ogTitle">
+    <meta property="og:description" content="Turn your child's everyday moments into tiny bedtime magic. Tiny Tale creates personalized stories and poems in minutes." data-i18n-attr="content:meta.ogDescription">
     <meta property="og:image" content="https://tinytale.app/og-image.jpg">
     <meta property="og:url" content="https://tinytale.app">
     <meta property="og:type" content="website">
@@ -25,41 +25,54 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="/" class="logo-text" aria-label="Tiny Tale home">Tiny Tale</a>
+                    <a href="/" class="logo-text" aria-label="Tiny Tale home" data-i18n="header.logo.text" data-i18n-attr="aria-label:header.logo.ariaLabel">Tiny Tale</a>
                 </div>
-                <nav class="nav-links" aria-label="Primary">
-                    <a href="mailto:info@tinytaleapp.com" class="nav-btn contact-btn" title="Contact us">
-                        <span class="sr-only">Email Tiny Tale</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="https://wa.me/" class="nav-btn whatsapp-btn" title="WhatsApp" target="_blank" rel="noopener noreferrer">
-                        <span class="sr-only">Message Tiny Tale on WhatsApp</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.instagram.com/" class="nav-btn instagram-btn" title="Instagram" target="_blank" rel="noopener noreferrer">
-                        <span class="sr-only">Visit Tiny Tale on Instagram</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.tiktok.com/" class="nav-btn tiktok-btn" title="TikTok" target="_blank" rel="noopener noreferrer">
-                        <span class="sr-only">Visit Tiny Tale on TikTok</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <div class="header-actions">
+                    <nav class="nav-links" aria-label="Primary" data-i18n-attr="aria-label:header.navigation.ariaLabel">
+                        <a href="mailto:info@tinytaleapp.com" class="nav-btn contact-btn" title="Contact us" data-i18n-attr="title:header.navigation.contact.title">
+                            <span class="sr-only" data-i18n="header.navigation.contact.sr">Email Tiny Tale</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/" class="nav-btn whatsapp-btn" title="WhatsApp" target="_blank" rel="noopener noreferrer" data-i18n-attr="title:header.navigation.whatsapp.title">
+                            <span class="sr-only" data-i18n="header.navigation.whatsapp.sr">Message Tiny Tale on WhatsApp</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/" class="nav-btn instagram-btn" title="Instagram" target="_blank" rel="noopener noreferrer" data-i18n-attr="title:header.navigation.instagram.title">
+                            <span class="sr-only" data-i18n="header.navigation.instagram.sr">Visit Tiny Tale on Instagram</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/" class="nav-btn tiktok-btn" title="TikTok" target="_blank" rel="noopener noreferrer" data-i18n-attr="title:header.navigation.tiktok.title">
+                            <span class="sr-only" data-i18n="header.navigation.tiktok.sr">Visit Tiny Tale on TikTok</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                             <path d="M19.321 9.537a4.93 4.93 0 0 1-.974-2.83c-.043-.916-.422-1.74-1.047-2.365-.625-.625-1.45-1.004-2.365-1.047A4.93 4.93 0 0 1 12 3.5V7.5a2.5 2.5 0 0 0-2.5 2.5v2a2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5v-2c0-1.38 1.12-2.5 2.5-2.5h2.5V8.5c-1.38 0-2.5 1.12-2.5 2.5v2c0 2.76-2.24 5-5 5s-5-2.24-5-5v-2c0-2.76 2.24-5 5-5h2.5V3.5h-2.5c-3.58 0-6.5 2.92-6.5 6.5v2c0 3.58 2.92 6.5 6.5 6.5s6.5-2.92 6.5-6.5v-2c0-1.38-1.12-2.5-2.5-2.5h-2.5v-2h2.5c2.49 0 4.5 2.01 4.5 4.5v2c0 2.49-2.01 4.5-4.5 4.5s-4.5-2.01-4.5-4.5v-2c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v2c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5v-2c0-2.49 2.01-4.5 4.5-4.5s4.5 2.01 4.5 4.5v2c0 2.49-2.01 4.5-4.5 4.5z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="#early-access" class="btn btn-primary">Get Early Access</a>
-                </nav>
+                            </svg>
+                        </a>
+                        <a href="#early-access" class="btn btn-primary" data-i18n="header.navigation.cta">Get Early Access</a>
+                    </nav>
+                    <div class="language-switcher" role="group" data-i18n-attr="aria-label:languageSwitcher.groupLabel">
+                        <button type="button" class="language-option" data-lang="en" aria-pressed="true">
+                            <span aria-hidden="true" data-i18n="languageSwitcher.englishShort">EN</span>
+                            <span class="sr-only" data-i18n="languageSwitcher.englishFull">English</span>
+                        </button>
+                        <button type="button" class="language-option" data-lang="he" aria-pressed="false">
+                            <span aria-hidden="true" data-i18n="languageSwitcher.hebrewShort">HE</span>
+                            <span class="sr-only" data-i18n="languageSwitcher.hebrewFull">Hebrew</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
+    <div class="sr-only" aria-live="polite" id="language-status" data-i18n="languageSwitcher.status">Language set to English</div>
 
     <!-- Main Content -->
     <main>
@@ -68,11 +81,11 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1 class="hero-headline">Turn today's moments into tiny bedtime magic.</h1>
-                        <p class="hero-subhead">Tiny Tale transforms your child's everyday photos into short, personalized stories or poems—ready to read and share.</p>
+                        <h1 class="hero-headline" data-i18n="hero.headline">Turn today's moments into tiny bedtime magic.</h1>
+                        <p class="hero-subhead" data-i18n="hero.subhead">Tiny Tale transforms your child's everyday photos into short, personalized stories or poems—ready to read and share.</p>
                         <div class="hero-actions">
-                            <a href="#early-access" class="btn btn-primary">Get Early Access</a>
-                            <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
+                            <a href="#early-access" class="btn btn-primary" data-i18n="hero.primaryCta">Get Early Access</a>
+                            <a href="#how-it-works" class="btn btn-ghost" data-i18n="hero.secondaryCta">See how it works</a>
                         </div>
                     </div>
                     <div class="hero-image" aria-hidden="true">
@@ -83,8 +96,8 @@
                                         <div class="story-preview">
                                             <div class="story-illustration"></div>
                                             <div class="story-text">
-                                                <h3>Emma's Magical Day</h3>
-                                                <p>Once upon a time, Emma found the most beautiful butterfly...</p>
+                                                <h3 data-i18n="hero.preview.title">Emma's Magical Day</h3>
+                                                <p data-i18n="hero.preview.body">Once upon a time, Emma found the most beautiful butterfly...</p>
                                             </div>
                                         </div>
                                     </div>
@@ -99,7 +112,7 @@
         <!-- How it Works -->
         <section id="how-it-works" class="how-it-works">
             <div class="container">
-                <h2 class="section-title">How it Works</h2>
+                <h2 class="section-title" data-i18n="how.title">How it Works</h2>
                 <div class="steps-grid">
                     <div class="step">
                         <div class="step-icon">
@@ -108,8 +121,8 @@
                                 <circle cx="16" cy="16" r="8" fill="currentColor"/>
                             </svg>
                         </div>
-                        <h3>Capture a moment</h3>
-                        <p>Snap a photo or pick one you love.</p>
+                        <h3 data-i18n="how.steps.capture.title">Capture a moment</h3>
+                        <p data-i18n="how.steps.capture.body">Snap a photo or pick one you love.</p>
                     </div>
                     <div class="step">
                         <div class="step-icon">
@@ -119,8 +132,8 @@
                                 <path d="M8 20h16" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3>Add tiny details</h3>
-                        <p>Name, age, interests—just a few taps.</p>
+                        <h3 data-i18n="how.steps.details.title">Add tiny details</h3>
+                        <p data-i18n="how.steps.details.body">Name, age, interests—just a few taps.</p>
                     </div>
                     <div class="step">
                         <div class="step-icon">
@@ -129,8 +142,8 @@
                                 <path d="M12 16l8-8 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <h3>Get a story</h3>
-                        <p>Magical, personalized story or poem in seconds.</p>
+                        <h3 data-i18n="how.steps.story.title">Get a story</h3>
+                        <p data-i18n="how.steps.story.body">Magical, personalized story or poem in seconds.</p>
                     </div>
                 </div>
             </div>
@@ -139,7 +152,7 @@
         <!-- Features -->
         <section class="features">
             <div class="container">
-                <h2 class="section-title">Why Parents Love Tiny Tale</h2>
+                <h2 class="section-title" data-i18n="features.title">Why Parents Love Tiny Tale</h2>
                 <div class="features-grid">
                     <div class="feature-card card">
                         <div class="feature-icon">
@@ -147,8 +160,8 @@
                                 <path d="M20 4l4 8h8l-6 6 2 8-8-4-8 4 2-8-6-6h8l4-8z" fill="currentColor"/>
                             </svg>
                         </div>
-                        <h3>Personalized stories & poems</h3>
-                        <p>Every story is unique, crafted just for your child using their name, age, and interests.</p>
+                        <h3 data-i18n="features.items.personalized.title">Personalized stories & poems</h3>
+                        <p data-i18n="features.items.personalized.body">Every story is unique, crafted just for your child using their name, age, and interests.</p>
                     </div>
                     <div class="feature-card card">
                         <div class="feature-icon">
@@ -158,8 +171,8 @@
                                 <path d="M8 32c0-6 6-12 12-12s12 6 12 12" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3>Gentle pastel illustrations</h3>
-                        <p>Beautiful, calming artwork that brings each story to life with soft, dreamy colors.</p>
+                        <h3 data-i18n="features.items.illustrations.title">Gentle pastel illustrations</h3>
+                        <p data-i18n="features.items.illustrations.body">Beautiful, calming artwork that brings each story to life with soft, dreamy colors.</p>
                     </div>
                     <div class="feature-card card">
                         <div class="feature-icon">
@@ -168,8 +181,8 @@
                                 <path d="M12 16h16M12 20h12M12 24h8" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3>Text inside the image, readable</h3>
-                        <p>Stories are embedded in beautiful images, making them perfect for sharing and saving.</p>
+                        <h3 data-i18n="features.items.readable.title">Text inside the image, readable</h3>
+                        <p data-i18n="features.items.readable.body">Stories are embedded in beautiful images, making them perfect for sharing and saving.</p>
                     </div>
                     <div class="feature-card card">
                         <div class="feature-icon">
@@ -179,8 +192,8 @@
                                 <circle cx="20" cy="32" r="2" fill="currentColor"/>
                             </svg>
                         </div>
-                        <h3>Easy sharing with family</h3>
-                        <p>Send beautiful stories to grandparents, aunts, uncles, and friends with one tap.</p>
+                        <h3 data-i18n="features.items.sharing.title">Easy sharing with family</h3>
+                        <p data-i18n="features.items.sharing.body">Send beautiful stories to grandparents, aunts, uncles, and friends with one tap.</p>
                     </div>
                     <div class="feature-card card">
                         <div class="feature-icon">
@@ -190,8 +203,8 @@
                                 <path d="M16 20l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <h3>Safe & private by design</h3>
-                        <p>Your photos stay private. Stories are generated locally, and we never store personal data.</p>
+                        <h3 data-i18n="features.items.private.title">Safe & private by design</h3>
+                        <p data-i18n="features.items.private.body">Your photos stay private. Stories are generated locally, and we never store personal data.</p>
                     </div>
                     <div class="feature-card card">
                         <div class="feature-icon">
@@ -200,8 +213,8 @@
                                 <path d="M20 8v12l8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <h3>Works in minutes</h3>
-                        <p>From photo to finished story in under 2 minutes. Perfect for busy parents.</p>
+                        <h3 data-i18n="features.items.fast.title">Works in minutes</h3>
+                        <p data-i18n="features.items.fast.body">From photo to finished story in under 2 minutes. Perfect for busy parents.</p>
                     </div>
                 </div>
             </div>
@@ -210,35 +223,35 @@
         <!-- Sample Stories -->
         <section class="sample-stories">
             <div class="container">
-                <h2 class="section-title">Sample Stories</h2>
+                <h2 class="section-title" data-i18n="samples.title">Sample Stories</h2>
                 <div class="stories-grid">
                     <div class="story-card">
                         <div class="story-image">
                             <div class="story-placeholder">🌙</div>
                         </div>
-                        <h3>Bedtime moon</h3>
-                        <p>A gentle story about a child who befriends the moon</p>
+                        <h3 data-i18n="samples.items.bedtime.title">Bedtime moon</h3>
+                        <p data-i18n="samples.items.bedtime.body">A gentle story about a child who befriends the moon</p>
                     </div>
                     <div class="story-card">
                         <div class="story-image">
                             <div class="story-placeholder">🌳</div>
                         </div>
-                        <h3>Park day</h3>
-                        <p>Adventures in the playground with magical friends</p>
+                        <h3 data-i18n="samples.items.park.title">Park day</h3>
+                        <p data-i18n="samples.items.park.body">Adventures in the playground with magical friends</p>
                     </div>
                     <div class="story-card">
                         <div class="story-image">
                             <div class="story-placeholder">👵</div>
                         </div>
-                        <h3>Grandma visit</h3>
-                        <p>A warm tale of love and cookies with grandma</p>
+                        <h3 data-i18n="samples.items.grandma.title">Grandma visit</h3>
+                        <p data-i18n="samples.items.grandma.body">A warm tale of love and cookies with grandma</p>
                     </div>
                     <div class="story-card">
                         <div class="story-image">
                             <div class="story-placeholder">🎨</div>
                         </div>
-                        <h3>Art day</h3>
-                        <p>When crayons come to life and create magic</p>
+                        <h3 data-i18n="samples.items.art.title">Art day</h3>
+                        <p data-i18n="samples.items.art.body">When crayons come to life and create magic</p>
                     </div>
                 </div>
             </div>
@@ -248,18 +261,18 @@
         <section id="early-access" class="early-access">
             <div class="container">
                 <div class="early-access-content">
-                    <h2>Join the early access list.</h2>
+                    <h2 data-i18n="earlyAccess.title">Join the early access list.</h2>
                     <form class="email-form" action="#" method="post" aria-live="polite">
                         <div class="form-group">
-                            <label for="email" class="sr-only">Email address</label>
-                            <input type="email" id="email" name="email" placeholder="Your email address" required aria-describedby="email-help">
+                            <label for="email" class="sr-only" data-i18n="earlyAccess.email.label">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="Your email address" required aria-describedby="email-help" data-i18n-attr="placeholder:earlyAccess.email.placeholder">
                         </div>
                         <div class="form-group">
-                            <label for="firstname" class="sr-only">First name (optional)</label>
-                            <input type="text" id="firstname" name="firstname" placeholder="First name (optional)">
+                            <label for="firstname" class="sr-only" data-i18n="earlyAccess.firstName.label">First name (optional)</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="First name (optional)" data-i18n-attr="placeholder:earlyAccess.firstName.placeholder">
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full">Notify Me</button>
-                        <p id="email-help" class="form-disclaimer text-sm muted">No spam. One email when we're ready.</p>
+                        <button type="submit" class="btn btn-primary btn-full" data-i18n="earlyAccess.submit">Notify Me</button>
+                        <p id="email-help" class="form-disclaimer text-sm muted" data-i18n="earlyAccess.disclaimer">No spam. One email when we're ready.</p>
                     </form>
                 </div>
             </div>
@@ -268,47 +281,47 @@
         <!-- Testimonials -->
         <section class="testimonials">
             <div class="container">
-                <h2 class="section-title">What Parents Say</h2>
+                <h2 class="section-title" data-i18n="testimonials.title">What Parents Say</h2>
                 <div class="testimonials-grid">
                     <div class="testimonial card">
                         <div class="testimonial-content">
-                            <p>"My daughter asks for her Tiny Tale stories every night. It's become our favorite bedtime routine."</p>
+                            <p data-i18n="testimonials.items.sarah.quote">"My daughter asks for her Tiny Tale stories every night. It's become our favorite bedtime routine."</p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-avatar">
                                 <div class="avatar-placeholder">S</div>
                             </div>
                             <div class="author-info">
-                                <h4>Sarah M.</h4>
-                                <p>Mom of Emma, age 4</p>
+                                <h4 data-i18n="testimonials.items.sarah.name">Sarah M.</h4>
+                                <p data-i18n="testimonials.items.sarah.meta">Mom of Emma, age 4</p>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial card">
                         <div class="testimonial-content">
-                            <p>"Finally, a way to turn those random playground photos into something meaningful. My kids love seeing themselves in stories."</p>
+                            <p data-i18n="testimonials.items.mike.quote">"Finally, a way to turn those random playground photos into something meaningful. My kids love seeing themselves in stories."</p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-avatar">
                                 <div class="avatar-placeholder">M</div>
                             </div>
                             <div class="author-info">
-                                <h4>Mike R.</h4>
-                                <p>Dad of twins, ages 5 & 6</p>
+                                <h4 data-i18n="testimonials.items.mike.name">Mike R.</h4>
+                                <p data-i18n="testimonials.items.mike.meta">Dad of twins, ages 5 & 6</p>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial card">
                         <div class="testimonial-content">
-                            <p>"The stories are so sweet and age-appropriate. It's amazing how it captures my son's personality perfectly."</p>
+                            <p data-i18n="testimonials.items.lisa.quote">"The stories are so sweet and age-appropriate. It's amazing how it captures my son's personality perfectly."</p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-avatar">
                                 <div class="avatar-placeholder">L</div>
                             </div>
                             <div class="author-info">
-                                <h4>Lisa K.</h4>
-                                <p>Mom of Jake, age 3</p>
+                                <h4 data-i18n="testimonials.items.lisa.name">Lisa K.</h4>
+                                <p data-i18n="testimonials.items.lisa.meta">Mom of Jake, age 3</p>
                             </div>
                         </div>
                     </div>
@@ -321,65 +334,65 @@
         <!-- FAQ -->
         <section class="faq">
             <div class="container">
-                <h2 class="section-title">Frequently Asked Questions</h2>
+                <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
                 <div class="faq-list">
                     <details class="faq-item">
                         <summary>
-                            <span>What is Tiny Tale?</span>
+                            <span data-i18n="faq.items.whatIs.question">What is Tiny Tale?</span>
                             <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </summary>
                         <div class="faq-content">
-                            <p>Tiny Tale is a mobile app that transforms your child's everyday photos into personalized bedtime stories and poems. Simply upload a photo, add a few details about your child, and receive a magical story in minutes.</p>
+                            <p data-i18n="faq.items.whatIs.answer">Tiny Tale is a mobile app that transforms your child's everyday photos into personalized bedtime stories and poems. Simply upload a photo, add a few details about your child, and receive a magical story in minutes.</p>
                         </div>
                     </details>
                     
                     <details class="faq-item">
                         <summary>
-                            <span>Is it safe for kids' photos?</span>
+                            <span data-i18n="faq.items.safe.question">Is it safe for kids' photos?</span>
                             <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </summary>
                         <div class="faq-content">
-                            <p>Absolutely. We prioritize your child's privacy and safety. Photos are processed locally on your device whenever possible, and we never store or share personal images. All stories are generated using secure, privacy-focused technology.</p>
+                            <p data-i18n="faq.items.safe.answer">Absolutely. We prioritize your child's privacy and safety. Photos are processed locally on your device whenever possible, and we never store or share personal images. All stories are generated using secure, privacy-focused technology.</p>
                         </div>
                     </details>
                     
                     <details class="faq-item">
                         <summary>
-                            <span>How long does it take to get a story?</span>
+                            <span data-i18n="faq.items.time.question">How long does it take to get a story?</span>
                             <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </summary>
                         <div class="faq-content">
-                            <p>Most stories are generated in under 2 minutes. The process includes analyzing your photo, understanding your child's details, and creating a personalized story with beautiful illustrations.</p>
+                            <p data-i18n="faq.items.time.answer">Most stories are generated in under 2 minutes. The process includes analyzing your photo, understanding your child's details, and creating a personalized story with beautiful illustrations.</p>
                         </div>
                     </details>
                     
                     <details class="faq-item">
                         <summary>
-                            <span>Will it work in Hebrew and English?</span>
+                            <span data-i18n="faq.items.languages.question">Will it work in Hebrew and English?</span>
                             <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </summary>
                         <div class="faq-content">
-                            <p>Yes! Tiny Tale supports multiple languages including Hebrew and English. You can choose your preferred language for both the app interface and the generated stories.</p>
+                            <p data-i18n="faq.items.languages.answer">Yes! Tiny Tale supports multiple languages including Hebrew and English. You can choose your preferred language for both the app interface and the generated stories.</p>
                         </div>
                     </details>
                     
                     <details class="faq-item">
                         <summary>
-                            <span>How much will it cost?</span>
+                            <span data-i18n="faq.items.cost.question">How much will it cost?</span>
                             <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </summary>
                         <div class="faq-content">
-                            <p>We're still finalizing our pricing, but we plan to offer both free stories (with limitations) and affordable subscription options for unlimited stories. Early access users will get special pricing when we launch.</p>
+                            <p data-i18n="faq.items.cost.answer">We're still finalizing our pricing, but we plan to offer both free stories (with limitations) and affordable subscription options for unlimited stories. Early access users will get special pricing when we launch.</p>
                         </div>
                     </details>
                 </div>
@@ -392,14 +405,15 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-main">
-                    <p class="footer-copyright">© Tiny Tale 2024</p>
+                    <p class="footer-copyright" data-i18n="footer.copy">© Tiny Tale 2024</p>
                     <div class="footer-links">
-                        <a href="#" class="muted">Privacy</a>
-                        <a href="#" class="muted">Terms</a>
+                        <a href="#" class="muted" data-i18n="footer.privacy">Privacy</a>
+                        <a href="#" class="muted" data-i18n="footer.terms">Terms</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="i18n.js" defer></script>
 </body>
 </html>
