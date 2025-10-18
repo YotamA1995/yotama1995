@@ -23,6 +23,7 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/story-viewer.css">
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -252,38 +253,48 @@
             <div class="container">
                 <h2 id="samples-heading" class="section-title" data-i18n="samples.title">Sample Stories</h2>
                 <div class="stories-grid">
-                    <div class="story-card">
+                    <div class="story-card story-card--interactive" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="story-viewer" data-story-title="Tom The Brave" data-story-images="stories/bedtime-moon/Page%201.png,stories/bedtime-moon/Page%202.png,stories/bedtime-moon/Page%203.png,stories/bedtime-moon/Page%204.png,stories/bedtime-moon/Page%205.png">
                         <div class="story-image">
-                            <div class="story-placeholder" aria-hidden="true">🌙</div>
+                            <img src="stories/bedtime-moon/Page%201.png" alt="Cover preview for Tom The Brave">
                         </div>
-                        <h3 data-i18n="samples.items.bedtime.title">Bedtime moon</h3>
-                        <p data-i18n="samples.items.bedtime.body">A gentle story about a child who befriends the moon</p>
+                        <h3 data-i18n="samples.items.bedtime.title">Tom The Brave</h3>
+                        <p data-i18n="samples.items.bedtime.body">A gentle story about courage, friendship, and the joy of helping others.</p>
                     </div>
-                    <div class="story-card">
+                    <div class="story-card story-card--interactive" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="story-viewer" data-story-title="Gaya Bedtime" data-story-images="stories/gaya-bedtime/Image%201.png,stories/gaya-bedtime/Image%202.png,stories/gaya-bedtime/Image%203.png,stories/gaya-bedtime/Image%204.png,stories/gaya-bedtime/Image%205.png">
                         <div class="story-image">
-                            <div class="story-placeholder" aria-hidden="true">🌳</div>
+                            <img src="stories/gaya-bedtime/Image%201.png" alt="Cover preview for Gaya Bedtime">
                         </div>
-                        <h3 data-i18n="samples.items.park.title">Park day</h3>
-                        <p data-i18n="samples.items.park.body">Adventures in the playground with magical friends</p>
-                    </div>
-                    <div class="story-card">
-                        <div class="story-image">
-                            <div class="story-placeholder" aria-hidden="true">👵</div>
-                        </div>
-                        <h3 data-i18n="samples.items.grandma.title">Grandma visit</h3>
-                        <p data-i18n="samples.items.grandma.body">A warm tale of love and cookies with grandma</p>
-                    </div>
-                    <div class="story-card">
-                        <div class="story-image">
-                            <div class="story-placeholder" aria-hidden="true">🎨</div>
-                        </div>
-                        <h3 data-i18n="samples.items.art.title">Art day</h3>
-                        <p data-i18n="samples.items.art.body">When crayons come to life and create magic</p>
+                        <h3>Gaya Bedtime</h3>
+                        <p>A sleepy Gaya and her teddy embark on a magical journey through the stars, guided by the glowing moon.</p>
                     </div>
                 </div>
             </div>
         </section>
-        
+
+        <div class="story-viewer" id="story-viewer" role="dialog" aria-modal="true" aria-labelledby="story-viewer-title" hidden>
+            <div class="story-viewer__backdrop" data-story-viewer-dismiss></div>
+            <div class="story-viewer__dialog" role="document">
+                <button type="button" class="story-viewer__close" data-story-viewer-close aria-label="Close story viewer">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="story-viewer__header">
+                    <h3 id="story-viewer-title">Tom The Brave</h3>
+                </div>
+                <div class="story-viewer__body">
+                    <button type="button" class="story-viewer__nav story-viewer__nav--prev" data-story-viewer-prev aria-label="View previous page">
+                        <span aria-hidden="true">‹</span>
+                    </button>
+                    <div class="story-viewer__stage">
+                        <img src="stories/bedtime-moon/Page%201.png" alt="Page 1 of 5 for Tom The Brave" class="story-viewer__image">
+                    </div>
+                    <button type="button" class="story-viewer__nav story-viewer__nav--next" data-story-viewer-next aria-label="View next page">
+                        <span aria-hidden="true">›</span>
+                    </button>
+                </div>
+                <p class="story-viewer__indicator" aria-live="polite">Page 1 of 5</p>
+            </div>
+        </div>
+
         <!-- Testimonials -->
         <section class="testimonials" aria-labelledby="testimonials-heading" hidden>
             <div class="container">
@@ -492,6 +503,7 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/story-viewer.js" defer></script>
     <script src="i18n.js" defer></script>
 </body>
 </html>
