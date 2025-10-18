@@ -156,7 +156,7 @@
         </section>
 
         <!-- Features -->
-        <section class="features" aria-labelledby="features-heading">
+        <section class="features" aria-labelledby="features-heading" hidden>
             <div class="container">
                 <h2 id="features-heading" class="section-title" data-i18n="features.title">Why Parents Love Tiny Tale</h2>
                 <div class="features-grid">
@@ -226,6 +226,27 @@
             </div>
         </section>
 
+        <!-- Email Capture / Early Access -->
+        <section id="early-access" class="early-access" aria-labelledby="early-access-heading">
+            <div class="container">
+                <div class="early-access-content">
+                    <h2 id="early-access-heading" data-i18n="earlyAccess.title">Join the early access list.</h2>
+                    <form class="email-form" action="#" method="post" aria-live="polite">
+                        <div class="form-group">
+                            <label for="email" class="sr-only" data-i18n="earlyAccess.email.label">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="Your email address" required aria-describedby="email-help" data-i18n-attr="placeholder:earlyAccess.email.placeholder">
+                        </div>
+                        <div class="form-group">
+                            <label for="firstname" class="sr-only" data-i18n="earlyAccess.firstName.label">First name (optional)</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="First name (optional)" data-i18n-attr="placeholder:earlyAccess.firstName.placeholder">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" data-i18n="earlyAccess.submit">Notify Me</button>
+                        <p id="email-help" class="form-disclaimer text-sm muted" data-i18n="earlyAccess.disclaimer">No spam. One email when we're ready.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!-- Sample Stories -->
         <section class="sample-stories" aria-labelledby="samples-heading">
             <div class="container">
@@ -262,30 +283,9 @@
                 </div>
             </div>
         </section>
-
-        <!-- Email Capture / Early Access -->
-        <section id="early-access" class="early-access" aria-labelledby="early-access-heading">
-            <div class="container">
-                <div class="early-access-content">
-                    <h2 id="early-access-heading" data-i18n="earlyAccess.title">Join the early access list.</h2>
-                    <form class="email-form" action="#" method="post" aria-live="polite">
-                        <div class="form-group">
-                            <label for="email" class="sr-only" data-i18n="earlyAccess.email.label">Email address</label>
-                            <input type="email" id="email" name="email" placeholder="Your email address" required aria-describedby="email-help" data-i18n-attr="placeholder:earlyAccess.email.placeholder">
-                        </div>
-                        <div class="form-group">
-                            <label for="firstname" class="sr-only" data-i18n="earlyAccess.firstName.label">First name (optional)</label>
-                            <input type="text" id="firstname" name="firstname" placeholder="First name (optional)" data-i18n-attr="placeholder:earlyAccess.firstName.placeholder">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full" data-i18n="earlyAccess.submit">Notify Me</button>
-                        <p id="email-help" class="form-disclaimer text-sm muted" data-i18n="earlyAccess.disclaimer">No spam. One email when we're ready.</p>
-                    </form>
-                </div>
-            </div>
-        </section>
         
         <!-- Testimonials -->
-        <section class="testimonials" aria-labelledby="testimonials-heading">
+        <section class="testimonials" aria-labelledby="testimonials-heading" hidden>
             <div class="container">
                 <h2 id="testimonials-heading" class="section-title" data-i18n="testimonials.title">What Parents Say</h2>
                 <div class="testimonials-grid">
@@ -356,49 +356,121 @@
                     
                     <details class="faq-item">
                         <summary>
-                            <span data-i18n="faq.items.safe.question">Is it safe for kids' photos?</span>
+                            <span data-i18n="faq.items.howWorks.question">How does it work?</span>
                             <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
                                 <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </summary>
                         <div class="faq-content">
-                            <p data-i18n="faq.items.safe.answer">Absolutely. We prioritize your child's privacy and safety. Photos are processed locally on your device whenever possible, and we never store or share personal images. All stories are generated using secure, privacy-focused technology.</p>
+                            <p data-i18n="faq.items.howWorks.answer">You add a photo or a short note, choose a vibe (Bed time or Enerjetic), and Tiny Tale creates a 5-page, read-aloud friendly mini-book with a matching illustration style.</p>
                         </div>
                     </details>
                     
                     <details class="faq-item">
                         <summary>
-                            <span data-i18n="faq.items.time.question">How long does it take to get a story?</span>
+                            <span data-i18n="faq.items.ages.question">What ages is it for?</span>
                             <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
                                 <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </summary>
                         <div class="faq-content">
-                            <p data-i18n="faq.items.time.answer">Most stories are generated in under 2 minutes. The process includes analyzing your photo, understanding your child's details, and creating a personalized story with beautiful illustrations.</p>
+                            <p data-i18n="faq.items.ages.answer">Best for ages 0-7. Text is simple, rhythmic, and bedtime-friendly.</p>
                         </div>
                     </details>
                     
                     <details class="faq-item">
                         <summary>
-                            <span data-i18n="faq.items.languages.question">Will it work in Hebrew and English?</span>
+                            <span data-i18n="faq.items.safe.question">Is my child's data and photos safe?</span>
                             <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
                                 <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </summary>
                         <div class="faq-content">
-                            <p data-i18n="faq.items.languages.answer">Yes! Tiny Tale supports multiple languages including Hebrew and English. You can choose your preferred language for both the app interface and the generated stories.</p>
+                            <p data-i18n="faq.items.safe.answer">Yes. Your content is encrypted in transit and at rest. You control what you upload and can delete content anytime from the app.</p>
                         </div>
                     </details>
                     
                     <details class="faq-item">
                         <summary>
-                            <span data-i18n="faq.items.cost.question">How much will it cost?</span>
+                            <span data-i18n="faq.items.train.question">Do you train AI on our photos?</span>
                             <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
                                 <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </summary>
                         <div class="faq-content">
-                            <p data-i18n="faq.items.cost.answer">We're still finalizing our pricing, but we plan to offer both free stories (with limitations) and affordable subscription options for unlimited stories. Early access users will get special pricing when we launch.</p>
+                            <p data-i18n="faq.items.train.answer">No. We do not use your private content to train our models.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            <span data-i18n="faq.items.edit.question">Can I edit the story?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+                                <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-content">
+                            <p data-i18n="faq.items.edit.answer">Yes. You can tweak names, tone, and small details before saving or sharing.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            <span data-i18n="faq.items.languages.question">What languages are supported?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+                                <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-content">
+                            <p data-i18n="faq.items.languages.answer">English at launch, with Hebrew and more coming soon.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            <span data-i18n="faq.items.share.question">Can I print or share the story?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+                                <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-content">
+                            <p data-i18n="faq.items.share.answer">Yes. Save as PDF for printing, or share a link/video from the app.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            <span data-i18n="faq.items.cost.question">What does it cost?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+                                <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-content">
+                            <p data-i18n="faq.items.cost.answer">You can try a few stories for free. After that, choose a subscription or buy credits (pricing shown in app).</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            <span data-i18n="faq.items.cancel.question">Can I cancel anytime?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+                                <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-content">
+                            <p data-i18n="faq.items.cancel.answer">Absolutely. Subscriptions can be canceled at any time in your app store settings.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            <span data-i18n="faq.items.help.question">I need help - how do I contact you?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+                                <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-content">
+                            <p data-i18n="faq.items.help.answer">In the app, go to Settings -> Help, or email support@tinytaleqpp.com</p>
                         </div>
                     </details>
                 </div>
