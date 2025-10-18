@@ -113,6 +113,16 @@
       "art": {
         "title": "Art day",
         "body": "When crayons come to life and create magic"
+      },
+      "tom": {
+        "title": "Tom The Brave",
+        "body": "A gentle story about courage, friendship, and the joy of helping others.",
+        "coverAlt": "Cover preview for Tom The Brave"
+      },
+      "gaya": {
+        "title": "Gaya Bedtime",
+        "body": "A dreamy nighttime adventure starring brave Gaya.",
+        "coverAlt": "Cover preview for Gaya Bedtime"
       }
     }
   },

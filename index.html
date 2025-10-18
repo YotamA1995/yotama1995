@@ -124,16 +124,6 @@
                     <div class="step">
                         <div class="step-icon">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
-                                <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="16" cy="16" r="8" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <h3 data-i18n="how.steps.capture.title">Capture a moment</h3>
-                        <p data-i18n="how.steps.capture.body">Snap a photo or pick one you love.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-icon">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
                                 <rect x="4" y="8" width="24" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
                                 <circle cx="12" cy="14" r="2" fill="currentColor"/>
                                 <path d="M8 20h16" stroke="currentColor" stroke-width="2"/>
@@ -141,6 +131,16 @@
                         </div>
                         <h3 data-i18n="how.steps.details.title">Add tiny details</h3>
                         <p data-i18n="how.steps.details.body">Name, age, interests—just a few taps.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
+                                <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="16" cy="16" r="8" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="how.steps.capture.title">Capture a moment</h3>
+                        <p data-i18n="how.steps.capture.body">Snap a photo or pick one you love.</p>
                     </div>
                     <div class="step">
                         <div class="step-icon">
@@ -253,19 +253,19 @@
             <div class="container">
                 <h2 id="samples-heading" class="section-title" data-i18n="samples.title">Sample Stories</h2>
                 <div class="stories-grid">
-                    <div class="story-card story-card--interactive" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="story-viewer" data-story-title="Tom The Brave" data-story-images="stories/bedtime-moon/Page%201.png,stories/bedtime-moon/Page%202.png,stories/bedtime-moon/Page%203.png,stories/bedtime-moon/Page%204.png,stories/bedtime-moon/Page%205.png">
+                    <div class="story-card story-card--interactive" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="story-viewer" data-story-title="Tom The Brave" data-story-images="stories/tom-the-brave/Page%201.png,stories/tom-the-brave/Page%202.png,stories/tom-the-brave/Page%203.png,stories/tom-the-brave/Page%204.png,stories/tom-the-brave/Page%205.png" data-i18n-attr="data-story-title:samples.items.tom.title">
                         <div class="story-image">
-                            <img src="stories/bedtime-moon/Page%201.png" alt="Cover preview for Tom The Brave">
+                            <img src="stories/tom-the-brave/Page%201.png" alt="Cover preview for Tom The Brave" data-i18n-attr="alt:samples.items.tom.coverAlt">
                         </div>
-                        <h3 data-i18n="samples.items.bedtime.title">Tom The Brave</h3>
-                        <p data-i18n="samples.items.bedtime.body">A gentle story about courage, friendship, and the joy of helping others.</p>
+                        <h3 data-i18n="samples.items.tom.title">Tom The Brave</h3>
+                        <p data-i18n="samples.items.tom.body">A gentle story about courage, friendship, and the joy of helping others.</p>
                     </div>
-                    <div class="story-card story-card--interactive" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="story-viewer" data-story-title="Gaya Bedtime" data-story-images="stories/gaya-bedtime/Image%201.png,stories/gaya-bedtime/Image%202.png,stories/gaya-bedtime/Image%203.png,stories/gaya-bedtime/Image%204.png,stories/gaya-bedtime/Image%205.png">
+                    <div class="story-card story-card--interactive" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="story-viewer" data-story-title="Gaya Bedtime" data-story-images="stories/gaya-bedtime/Image%201.png,stories/gaya-bedtime/Image%202.png,stories/gaya-bedtime/Image%203.png,stories/gaya-bedtime/Image%204.png,stories/gaya-bedtime/Image%205.png" data-i18n-attr="data-story-title:samples.items.gaya.title">
                         <div class="story-image">
-                            <img src="stories/gaya-bedtime/Image%201.png" alt="Cover preview for Gaya Bedtime">
+                            <img src="stories/gaya-bedtime/Image%201.png" alt="Cover preview for Gaya Bedtime" data-i18n-attr="alt:samples.items.gaya.coverAlt">
                         </div>
-                        <h3>Gaya Bedtime</h3>
-                        <p>A sleepy Gaya and her teddy embark on a magical journey through the stars, guided by the glowing moon.</p>
+                        <h3 data-i18n="samples.items.gaya.title">Gaya Bedtime</h3>
+                        <p data-i18n="samples.items.gaya.body">A dreamy nighttime adventure starring brave Gaya.</p>
                     </div>
                 </div>
             </div>
@@ -285,7 +285,7 @@
                         <span aria-hidden="true">‹</span>
                     </button>
                     <div class="story-viewer__stage">
-                        <img src="stories/bedtime-moon/Page%201.png" alt="Page 1 of 5 for Tom The Brave" class="story-viewer__image">
+                        <img src="stories/tom-the-brave/Page%201.png" alt="Page 1 of 5 for Tom The Brave" class="story-viewer__image">
                     </div>
                     <button type="button" class="story-viewer__nav story-viewer__nav--next" data-story-viewer-next aria-label="View next page">
                         <span aria-hidden="true">›</span>
