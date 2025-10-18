@@ -170,6 +170,11 @@ const applyTranslations = (language, translations) => {
 
   updateLanguageSwitcher(language);
   announceLanguageChange(translations);
+  document.dispatchEvent(
+    new CustomEvent("tinytale:language-change", {
+      detail: { language, translations },
+    })
+  );
 };
 
 const setLanguage = async (language, { persist = true } = {}) => {

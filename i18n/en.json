@@ -126,6 +126,10 @@
       }
     }
   },
+  "storyViewer": {
+    "indicator": "Page {current} of {total}",
+    "imageAlt": "Page {current} of {total} for {title}"
+  },
   "earlyAccess": {
     "title": "Join the early access list.",
     "email": {
@@ -166,21 +170,45 @@
         "question": "What is Tiny Tale?",
         "answer": "Tiny Tale is a mobile app that transforms your child's everyday photos into personalized bedtime stories and poems. Simply upload a photo, add a few details about your child, and receive a magical story in minutes."
       },
-      "safe": {
-        "question": "Is it safe for kids' photos?",
-        "answer": "Absolutely. We prioritize your child's privacy and safety. Photos are processed locally on your device whenever possible, and we never store or share personal images. All stories are generated using secure, privacy-focused technology."
+      "howWorks": {
+        "question": "How does it work?",
+        "answer": "You add a photo or a short note, choose a vibe (Bedtime or Energetic), and Tiny Tale creates a 5-page, read-aloud friendly mini-book with a matching illustration style."
       },
-      "time": {
-        "question": "How long does it take to get a story?",
-        "answer": "Most stories are generated in under 2 minutes. The process includes analyzing your photo, understanding your child's details, and creating a personalized story with beautiful illustrations."
+      "ages": {
+        "question": "What ages is it for?",
+        "answer": "Best for ages 0-7. Text is simple, rhythmic, and bedtime-friendly."
+      },
+      "safe": {
+        "question": "Is my child's data and photos safe?",
+        "answer": "Yes. Your content is encrypted in transit and at rest. You control what you upload and can delete content anytime from the app."
+      },
+      "train": {
+        "question": "Do you train AI on our photos?",
+        "answer": "No. We do not use your private content to train our models."
+      },
+      "edit": {
+        "question": "Can I edit the story?",
+        "answer": "Yes. You can tweak names, tone, and small details before saving or sharing."
       },
       "languages": {
-        "question": "Will it work in Hebrew and English?",
-        "answer": "Yes! Tiny Tale supports multiple languages including Hebrew and English. You can choose your preferred language for both the app interface and the generated stories."
+        "question": "What languages are supported?",
+        "answer": "English at launch, with Hebrew and more coming soon."
+      },
+      "share": {
+        "question": "Can I print or share the story?",
+        "answer": "Yes. Save as PDF for printing, or share a link/video from the app."
       },
       "cost": {
-        "question": "How much will it cost?",
-        "answer": "We're still finalizing our pricing, but we plan to offer both free stories (with limitations) and affordable subscription options for unlimited stories. Early access users will get special pricing when we launch."
+        "question": "What does it cost?",
+        "answer": "You can try a few stories for free. After that, choose a subscription or buy credits (pricing shown in app)."
+      },
+      "cancel": {
+        "question": "Can I cancel anytime?",
+        "answer": "Absolutely. Subscriptions can be canceled at any time in your app store settings."
+      },
+      "help": {
+        "question": "I need help - how do I contact you?",
+        "answer": "In the app, go to Settings -> Help, or email support@tinytaleapp.com"
       }
     }
   },

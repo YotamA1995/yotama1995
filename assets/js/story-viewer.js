@@ -37,9 +37,24 @@
         );
     };
 
+    const formatWithTemplate = (template, values) =>
+        template.replace(/\{(\w+)\}/g, (match, key) =>
+            Object.prototype.hasOwnProperty.call(values, key) ? values[key] : match
+        );
+
+    const getIndicatorTemplate = () =>
+        indicator?.getAttribute('data-template') || 'Page {current} of {total}';
+
+    const getImageAltTemplate = () =>
+        imageEl?.getAttribute('data-alt-template') || 'Page {current} of {total} for {title}';
+
     const formatIndicator = (index) => {
         const pageNumber = index + 1;
-        return `Page ${pageNumber} of ${pages.length}`;
+        return formatWithTemplate(getIndicatorTemplate(), {
+            current: pageNumber,
+            total: pages.length,
+            title: activeTitle,
+        });
     };
 
     const updateIndicator = () => {
@@ -54,7 +69,11 @@
         const boundedIndex = (index + pages.length) % pages.length;
         activeIndex = boundedIndex;
         const nextSrc = pages[boundedIndex];
-        const nextAlt = `${formatIndicator(boundedIndex)} for ${activeTitle}`;
+        const nextAlt = formatWithTemplate(getImageAltTemplate(), {
+            current: boundedIndex + 1,
+            total: pages.length,
+            title: activeTitle,
+        });
 
         const applyImage = () => {
             imageEl.src = nextSrc;
@@ -231,4 +250,28 @@
             { passive: true }
         );
     }
+
+    document.addEventListener('tinytale:language-change', () => {
+        if (!indicator) return;
+
+        if (!pages.length) {
+            const fallbackMessage = formatWithTemplate(getIndicatorTemplate(), {
+                current: 1,
+                total: 1,
+                title: activeTitle || '',
+            });
+            indicator.textContent = fallbackMessage;
+            indicator.setAttribute('aria-label', fallbackMessage);
+            if (imageEl) {
+                imageEl.alt = formatWithTemplate(getImageAltTemplate(), {
+                    current: 1,
+                    total: 1,
+                    title: activeTitle || '',
+                });
+            }
+            return;
+        }
+
+        setImage(activeIndex, { skipAnimation: true });
+    });
 })();
