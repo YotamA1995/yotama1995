@@ -3,7 +3,33 @@ const DEFAULT_LANGUAGE = "en";
 const STORAGE_KEY = "tinytale-language";
 const TRANSLATION_PATH = "i18n";
 const translationCache = new Map();
+
 let currentLanguage = DEFAULT_LANGUAGE;
+let requestedLanguage = DEFAULT_LANGUAGE;
+let activeRequestToken = null;
+
+const safeStorage = {
+  get(key) {
+    try {
+      if (typeof window === "undefined" || !("localStorage" in window)) {
+        return null;
+      }
+      return window.localStorage.getItem(key);
+    } catch (error) {
+      return null;
+    }
+  },
+  set(key, value) {
+    try {
+      if (typeof window === "undefined" || !("localStorage" in window)) {
+        return;
+      }
+      window.localStorage.setItem(key, value);
+    } catch (error) {
+      /* ignore write failures (e.g., Safari private mode) */
+    }
+  },
+};
 
 const getNestedValue = (object, path) => {
   return path.split(".").reduce((accumulator, key) => {
@@ -14,25 +40,43 @@ const getNestedValue = (object, path) => {
   }, object);
 };
 
-const fetchTranslations = async (language) => {
+const fetchTranslations = (language) => {
   if (translationCache.has(language)) {
-    return translationCache.get(language);
+    const cached = translationCache.get(language);
+    if (cached instanceof Promise) {
+      return cached;
+    }
+    return Promise.resolve(cached);
   }
 
-  const response = await fetch(`${TRANSLATION_PATH}/${language}.json`);
-  if (!response.ok) {
-    throw new Error(`Unable to load translations for ${language}`);
-  }
+  const request = fetch(`${TRANSLATION_PATH}/${language}.json`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Unable to load translations for ${language}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      translationCache.set(language, data);
+      return data;
+    })
+    .catch((error) => {
+      translationCache.delete(language);
+      throw error;
+    });
 
-  const data = await response.json();
-  translationCache.set(language, data);
-  return data;
+  translationCache.set(language, request);
+  return request;
 };
 
 const resolveInitialLanguage = () => {
-  const stored = localStorage.getItem(STORAGE_KEY);
+  const stored = safeStorage.get(STORAGE_KEY);
   if (stored && SUPPORTED_LANGUAGES.includes(stored)) {
     return stored;
+  }
+
+  if (typeof navigator === "undefined") {
+    return DEFAULT_LANGUAGE;
   }
 
   const navigatorLanguages = Array.isArray(navigator.languages)
@@ -129,21 +173,53 @@ const applyTranslations = (language, translations) => {
 };
 
 const setLanguage = async (language, { persist = true } = {}) => {
-  if (!SUPPORTED_LANGUAGES.includes(language) || language === currentLanguage) {
+  if (!SUPPORTED_LANGUAGES.includes(language)) {
+    return;
+  }
+
+  if (language === requestedLanguage && !activeRequestToken) {
+    return;
+  }
+
+  requestedLanguage = language;
+  const requestToken = Symbol("language-request");
+  activeRequestToken = requestToken;
+
+  if (language === currentLanguage) {
+    updateDirectionality(language);
+    updateLanguageSwitcher(language);
+    announceLanguageChange(
+      translationCache.get(language) instanceof Promise
+        ? undefined
+        : translationCache.get(language)
+    );
+    activeRequestToken = null;
     return;
   }
 
   try {
     const translations = await fetchTranslations(language);
+    if (requestedLanguage !== language || activeRequestToken !== requestToken) {
+      return;
+    }
+
     currentLanguage = language;
     applyTranslations(language, translations);
     if (persist) {
-      localStorage.setItem(STORAGE_KEY, language);
+      safeStorage.set(STORAGE_KEY, language);
     }
   } catch (error) {
     console.error(error);
-    if (language !== DEFAULT_LANGUAGE) {
+    if (requestedLanguage === language) {
+      requestedLanguage = currentLanguage;
+    }
+    if (language !== DEFAULT_LANGUAGE && requestedLanguage !== DEFAULT_LANGUAGE) {
+      requestedLanguage = DEFAULT_LANGUAGE;
       setLanguage(DEFAULT_LANGUAGE, { persist });
+    }
+  } finally {
+    if (activeRequestToken === requestToken) {
+      activeRequestToken = null;
     }
   }
 };
@@ -160,18 +236,27 @@ const bindLanguageSwitcher = () => {
 };
 
 const initializeTranslations = async () => {
-  currentLanguage = resolveInitialLanguage();
+  const initialLanguage = resolveInitialLanguage();
   bindLanguageSwitcher();
 
+  if (initialLanguage === currentLanguage) {
+    updateDirectionality(initialLanguage);
+    updateLanguageSwitcher(initialLanguage);
+    if (!safeStorage.get(STORAGE_KEY)) {
+      safeStorage.set(STORAGE_KEY, initialLanguage);
+    }
+    return;
+  }
+
   try {
-    const translations = await fetchTranslations(currentLanguage);
-    applyTranslations(currentLanguage, translations);
-    if (!localStorage.getItem(STORAGE_KEY)) {
-      localStorage.setItem(STORAGE_KEY, currentLanguage);
+    await setLanguage(initialLanguage);
+    if (!safeStorage.get(STORAGE_KEY)) {
+      safeStorage.set(STORAGE_KEY, initialLanguage);
     }
   } catch (error) {
     console.error(error);
-    if (currentLanguage !== DEFAULT_LANGUAGE) {
+    if (initialLanguage !== DEFAULT_LANGUAGE) {
+      requestedLanguage = DEFAULT_LANGUAGE;
       setLanguage(DEFAULT_LANGUAGE, { persist: false });
     }
   }
